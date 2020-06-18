@@ -1,0 +1,13 @@
+gradlew
+gradlew.bat
+settings.gradle
+
+out/
+*.iml
+.gradle
+.idea
+build
+gradle
+.class
+.html
+intellij-java-google-style.xml
