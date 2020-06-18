@@ -1,0 +1,72 @@
+body {
+  background: white;
+  border: 20px solid black;
+  padding: 20px;
+  width: available;
+  margin: 20px;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+h1 {
+  font-family: "Arial Black";
+  font-size: 30px;
+  color: black;
+  line-height: 1.5;
+  text-align: center;
+  text-transform: capitalize;
+  border-bottom: 2px solid #f1f1f1;
+  padding-bottom: 10px;
+}
+
+p {
+  font-size: 20px;
+  width: auto;
+  font-family: Georgia;
+  font-weight: bold;
+}
+
+video {
+  width: auto;
+  margin-left: 35%;
+}
+
+.link {
+  text-align: end;
+  font-family: Georgia;
+  margin: 8px;
+}
+
+.header strong {
+  font-size: x-large;
+  color: black;
+  text-align: right;
+}
+
+.header p {
+  text-align: end;
+}
+
+.case {
+  text-align: center;
+}
+
+.data {
+  color: red;
+  font-size: larger;
+  letter-spacing: 0.2rem;
+}
+
+.date {
+  color: #3498db;
+  letter-spacing: 0.2rem;
+}
+
+.news h3 {
+  font-size: 25px;
+  font-family: 'Raleway', sans-serif;
+}
+
+.quote {
+  border-left: 5px solid #bdc3c7;
+  padding-left: 5px;
+}
