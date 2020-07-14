@@ -6,8 +6,6 @@
 
 body {
 	background: black;
-	font-size: 120%;
-	font-family: "tablet-gothic", verdana, arial, sans-serif;
 }
 
 
@@ -22,12 +20,11 @@ h1 {
 
 p li {
 	font-size: 10px;
+	font-family: "tablet-gothic-condensed", "arial narrow", arial, verdana, sans-serif;
 }
 
-div {
-	display: block;
-	position: relative;
-
+h3 {
+	font-family: "tablet-gothic-condensed", "arial narrow", arial, verdana, sans-serif;
 }
 
 .info {
@@ -36,8 +33,6 @@ div {
 
 div.main {
 	background: black;
-
-
 }
 
 div.overview {
