@@ -168,27 +168,13 @@
   </div>
 
   <div class="row">
-    <!--    <div id="root" class="col-sm-6 col-md-3">-->
-    <!--      <h3 id="rank">Rank</h3>-->
-    <!--      <ul class="list-group">-->
-    <!--        <li class="list-group-item rank-list"><span class="badge">2,636,538</span>US</li>-->
-    <!--        <li class="list-group-item rank-list"><span class="badge">1,402,041</span>Brazil</li>-->
-    <!--        <li class="list-group-item rank-list"><span class="badge">653,479</span>Russia</li>-->
-    <!--        <li class="list-group-item rank-list"><span class="badge">585,481</span>India</li>-->
-    <!--        <li class="list-group-item rank-list"><span class="badge">314,161</span>United Kingdom</li>-->
-    <!--        <li class="list-group-item rank-list"><span class="badge">285,213</span>Peru</li>-->
-    <!--        <li class="list-group-item rank-list"><span class="badge">279,393</span>Chile</li>-->
-    <!--        <li class="list-group-item rank-list"><span class="badge">249,271</span>Spain</li>-->
-    <!--        <li class="list-group-item rank-list"><span class="badge">240,578</span>Italy</li>-->
-    <!--        <li class="list-group-item rank-list"><span class="badge">227,662</span>Iran</li>-->
-    <!--      </ul>-->
-    <!--    </div>-->
-
+<!--    Implement rank using React-->
     <div id="root" class="col-sm-6 col-md-3">
       <script type="text/babel">
+        // Shows rank list
         function ShowRank(props) {
           const rankList = (
-              <ul>
+              <ul className="list-group">
                 {props.posts.map((post) =>
                     <li className="list-group-item rank-list" key={post.index}>
                       {<span className="badge">{post.confirmedCases}</span>}
@@ -204,23 +190,56 @@
               </div>
           );
         }
+        // Reads data file
+        function ReadTextFile(file, callback) {
+          let rawFile = new XMLHttpRequest();
+          rawFile.overrideMimeType("application/json");
+          rawFile.open("GET", file, true);
+          rawFile.onreadystatechange = function () {
+            if (rawFile.readyState === 4 && rawFile.status == "200") {
+              callback(rawFile.responseText);
+            }
+          };
+          rawFile.send(null);
+         }
+        // Sorts confirmed case of countries by decreasing order
+        function GetSortOrder(prop) {
+          return function (a, b) {
+            if (a[prop] > b[prop]) {
+              return -1;
+            } else if (a[prop] < b[prop]) {
+              return 1;
+            }
+            return 0;
+          }
+        }
 
-        const data = [{"country": "Indonesia", "confirmedCases": 78572},
-          {"country": "Argentina", "confirmedCases": 106910},
-          {"country": "US", "confirmedCases": 3431574},
-          {"country": "India", "confirmedCases": 936181},
-          {"country": "Germany", "confirmedCases": 200456},
-          {"country": "Italy", "confirmedCases": 243344},
-          {"country": "United Kingdom", "confirmedCases": 292931},
-          {"country": "Brazil", "confirmedCases": 1926824},
-          {"country": "China", "confirmedCases": 85226},
-          {"country": "Peru", "confirmedCases": 333867},
-          {"country": "Saudi Arabia", "confirmedCases": 237803},
-          {"country": "Japan", "confirmedCases": 22437},
-          {"country": "Russia", "confirmedCases": 738787},
-          {"country": "Chile", "confirmedCases": 319493}
-        ];
+        const array = ReadTextFile("data.json", function (text) {
+          let data = JSON.parse(text);
+          data.sort(GetSortOrder("confirmedCases"));
+          ReactDOM.render(
+              <ShowRank posts={data}/>,
+              document.getElementById('root')
+          );
+        });
+        console.log(array);
 
+        // const data = [{"country": "Indonesia", "confirmedCases": 78572},
+        //   {"country": "Argentina", "confirmedCases": 106910},
+        //   {"country": "US", "confirmedCases": 3431574},
+        //   {"country": "India", "confirmedCases": 936181},
+        //   {"country": "Germany", "confirmedCases": 200456},
+        //   {"country": "Italy", "confirmedCases": 243344},
+        //   {"country": "United Kingdom", "confirmedCases": 292931},
+        //   {"country": "Brazil", "confirmedCases": 1926824},
+        //   {"country": "China", "confirmedCases": 85226},
+        //   {"country": "Peru", "confirmedCases": 333867},
+        //   {"country": "Saudi Arabia", "confirmedCases": 237803},
+        //   {"country": "Japan", "confirmedCases": 22437},
+        //   {"country": "Russia", "confirmedCases": 738787},
+        //   {"country": "Chile", "confirmedCases": 319493}
+        // ];
+        // console.log(data);
         ReactDOM.render(
             <ShowRank posts={data}/>,
             document.getElementById('root')
@@ -229,65 +248,7 @@
 
     </div>
 
-    <div id="root1"></div>
-    <script type="text/babel">
-      function readTextFile(file, callback) {
-        let rawFile = new XMLHttpRequest();
-        rawFile.overrideMimeType("application/json");
-        rawFile.open("GET", file, true);
-        rawFile.onreadystatechange = function () {
-          if (rawFile.readyState === 4 && rawFile.status == "200") {
-            callback(rawFile.responseText);
-          }
-        };
-        rawFile.send(null);
-      }
-
-      function GetSortOrder(prop) {
-        return function (a, b) {
-          if (a[prop] > b[prop]) {
-            return -1;
-          } else if (a[prop] < b[prop]) {
-            return 1;
-          }
-          return 0;
-        }
-      }
-
-      readTextFile("data.json", function (text) {
-        let data = JSON.parse(text);
-        // console.log(data);
-        data.sort(GetSortOrder("confirmedCases"));
-        console.log(data);
-      });
-
-      // function rankList() {
-      //   let data;
-      //   readTextFile("data.json", function (text) {
-      //     data = JSON.parse(text);
-      //     // console.log(data);
-      //     data.sort(GetSortOrder("confirmedCases"));
-      //     console.log(data);
-      //     let confirmedCases = [];
-      //     let country = [];
-      //     for (let i = 0; i < 10; i++) {
-      //       confirmedCases.push(data[i].confirmedCases);
-      //       country.push(data[i].country);
-      //     }
-      //     console.log(confirmedCases);
-      //     console.log(country);
-      //     return (
-      //         <div>
-      //           <li className="list-group-item rank-list"><span className="badge">{confirmedCases}</span>country</li>;
-      //         </div>
-      //     );
-      //   });
-
-
-    </script>
-
-
-    <div>
+     <div>
       <video class="col-sm-6 col-md-6" controls>
         <source src="../term1/data/covid19_FULLData.mp4" type="video/mp4">
       </video>
