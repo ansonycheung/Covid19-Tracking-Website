@@ -1,19 +1,62 @@
+.navbar-default{
+  background: black;
+  border: 0;
+}
+
+body{
+  background: black;
+}
+
+.thumbnail{
+  background-color: black;
+  border: 0;
+}
+
+/*.thumbnail a{*/
+/*  font-size: x-large;*/
+/*  font-weight: 700;*/
+/*  color: rgba(234,46,73,0.9);*/
+/*  letter-spacing: 2px;*/
+/*  transition: all 0.3s;*/
+/*  -webkit-transition: background 0.3s;*/
+/*  -moz-transition: background 0.3s;*/
+/*  align-content: end;*/
+/*}*/
+
+.center {
+  margin: 0px;
+  border: 5px;
+  position: absolute;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
 #rank{
   text-align: center;
   line-height: 1.1;
   font-weight: 700;
-  color: red;
+  color: rgba(234,46,73,0.9);
   margin: 0;
   text-transform: uppercase;
   padding: 20px 0;
   letter-spacing: 2px;
 }
 
+.rank-list{
+  background-color: rgba(234,46,73,0.9);
+  color: white;
+  border: 0px;
+}
+
+.badge{
+  background-color: black;
+}
 #news{
   text-align: center;
   line-height: 1.1;
   font-weight: 700;
-  color: red;
+  color: rgba(234,46,73,0.9);
   margin: 0;
   text-transform: uppercase;
   padding: 20px 0;
