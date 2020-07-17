@@ -19,6 +19,7 @@ class Home extends React.Component{
               <Link className="btn btn-info btn-lg" to="/search">Search</Link>
               <Link className="btn btn-success btn-lg" to="/forum">Forum</Link>
               <Link className="btn btn-dark btn-lg" to="/contact">Contact us</Link>
+              <Link className="btn btn-warning btn-lg" to="/news">News</Link>
             </div>
           </div>
         </div>

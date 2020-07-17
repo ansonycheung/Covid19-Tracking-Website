@@ -1,6 +1,5 @@
 import React from 'react';
 import "bootstrap/dist/css/bootstrap.min.css"
-import {Link} from "react-router-dom";
 import Navbar from "../components/navbar.component";
 class Data extends React.Component{
   state = {
@@ -9,10 +8,10 @@ class Data extends React.Component{
   };
 
   componentDidMount() {
-    fetch("http://localhost:9000/data")
-    .then(res => res.json())
-    .then(
-        (res) => {
+          fetch("http://localhost:9000/data")
+          .then(res => res.json())
+          .then(
+              (res) => {
           this.setState({
             data: res.imgs,
             date: res.date
@@ -24,7 +23,6 @@ class Data extends React.Component{
   }
   render() {
     const data = this.state.data;
-    const navbar = [];
     const imgs = [];
 
     for (let i = 0; i < data.length; i += 2) {
@@ -49,7 +47,6 @@ class Data extends React.Component{
             {imgs}
           </div>
         </div>
-
     );
   }
 }
