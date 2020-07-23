@@ -5,6 +5,7 @@ import requests
 
 df = bcr.load_dataset('covid19')
 url="http://covidtracking.com/api/states/daily.csv"
+"http://covidtracking.com/api/v1/states/current.csv"
 s= requests.get(url).content
 df = pd.read_csv(io.StringIO(s.decode('utf-8')))
 # stringpath = "/Users/Ada/Desktop/covid19/testData.csv"
