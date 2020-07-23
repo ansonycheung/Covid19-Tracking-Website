@@ -1,31 +1,37 @@
-body {
+html body {
   background-color: black;
   /*font-family: "tablet-gothic-condensed", "arial narrow", arial, verdana, sans-serif;*/
 }
 
-/*hr {*/
+div.jumbotron {
+  color: white;
+  background-color: rgba(234,46,73,0.9);
+
+}
+
+/*.container hr {*/
 /*  border-top: 1px solid #f8f8f8;*/
 /*  border-bottom: 1px solid rgba(0,0,0,0.2);*/
 /*}*/
 
-h1 {
-  color: white;
-  font-weight: 900;
-  font-size: 8em;
-  letter-spacing: 1px;
-  line-height: 1em;
-  font-family: "tablet-gothic-condensed", "arial narrow", arial, verdana, sans-serif;
-  text-shadow: 0px 4px 3px rgba(255,255,255,0.4),
-  0px 8px 13px rgba(255,255,255,0.1),
-  0px 18px 23px rgba(255,255,255,0.1);
+/*header h1 {*/
+/*  color: white;*/
+/*  font-weight: 900;*/
+/*  font-size: 8em;*/
+/*  letter-spacing: 1px;*/
+/*  line-height: 1em;*/
+/*  font-family: "tablet-gothic-condensed", "arial narrow", arial, verdana, sans-serif;*/
+/*  text-shadow: 0px 4px 3px rgba(255,255,255,0.4),*/
+/*  0px 8px 13px rgba(255,255,255,0.1),*/
+/*  0px 18px 23px rgba(255,255,255,0.1);*/
 
-}
+/*}*/
 
 #posts {
   background-color: white;
 }
 
-.row {
+.above {
   color:darkgray;
   font-weight: bold;
   font-size: 2em;
@@ -53,5 +59,13 @@ h1 {
   color:red;
 }
 button {
-  margin-bottom: 5%;
+  margin-bottom: 10%;
 }
+
+/*.container {*/
+/*  color:red;*/
+/*  display: flex;*/
+/*  align-items: stretch;*/
+
+/*}*/
+
