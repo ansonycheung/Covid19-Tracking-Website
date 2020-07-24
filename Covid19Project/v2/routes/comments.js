@@ -1,0 +1,50 @@
+var express = require('express');
+var router = express.Router({ mergeParams: true });
+var Blog = require('../models/blog');
+var Comment = require('../models/comment');
+
+// Comments New
+router.get('/new', isLoggedIn, function(req, res) {
+	Blog.findById(req.params.id, function(err, blog) {
+		if (err) {
+			console.log(err);
+		} else {
+			res.render('comments/new', { blog: blog });
+		}
+	});
+});
+
+// Comments Create
+router.post('/', isLoggedIn, function(req, res) {
+	Blog.findById(req.params.id, function(err, blog) {
+		if (err) {
+			console.log(err);
+			redirect('/blogs');
+		} else {
+			Comment.create(req.body.comment, function(err, comment) {
+				if (err) {
+					console.log(err);
+				} else {
+					// add username and id to comment
+					comment.author.id = req.user._id;
+					comment.author.username = req.user.username;
+					// save comment
+					comment.save();
+					blog.comments.push(comment);
+					blog.save();
+					res.redirect('/blogs/' + blog._id);
+				}
+			});
+		}
+	});
+});
+
+// middleware
+function isLoggedIn(req, res, next) {
+	if (req.isAuthenticated()) {
+		return next();
+	}
+	res.redirect('/login');
+}
+
+module.exports = router;
