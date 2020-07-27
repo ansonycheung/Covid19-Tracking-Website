@@ -4,10 +4,10 @@ function RankItem({country, confirmedCases}) {
   return (
       <div className="RankItem">
         <ul className="list-group" style={{
-          margin: "2px",
+          margin: "2px"
         }}>
           <li className="list-group-item" style={{
-            backgroundColor: "rgba(234,46,73,0.9)",
+            backgroundColor: "#e21a2d",
             color: "white",
             border: "0px",
             textAlign: "left",
@@ -20,7 +20,8 @@ function RankItem({country, confirmedCases}) {
             letterSpacing: "1px"
           }}>
             <span className="badge"
-                  style={{backgroundColor: "black"}}>{confirmedCases}</span>
+                  style={{backgroundColor: "black"}}>{confirmedCases.toLocaleString(
+                'en-US')}</span>
             <span style={{textAlign: "left"}}>{country}</span>
           </li>
         </ul>

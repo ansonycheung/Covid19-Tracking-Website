@@ -17,6 +17,7 @@ function Jumbotron() {
             <p style={{
               fontSize: "20px",
               fontWeight: "bold",
+              color: "black"
             }}>NEU Align Student Group Project</p>
           </div>
         </div>

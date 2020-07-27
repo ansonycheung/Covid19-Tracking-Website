@@ -4,13 +4,13 @@ import RankItem from "./RankItem";
 function ShowRankList(items) {
   return (
       <div>
-        {items.map((item) => <RankItem key={item.country} country={item.country} confirmedCases={item.confirmedCases}/>)}
+        {items.map((item) => <RankItem key={item.country} country={item.country}
+                                       confirmedCases={item.confirmedCases}/>)}
       </div>
   );
 }
 
-
-class RankDex extends Component{
+class RankDex extends Component {
   render() {
     let data = require('../data_resource/data');
     let sortedData = data.sort(function (a, b) {

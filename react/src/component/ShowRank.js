@@ -5,8 +5,8 @@ class ShowRank extends Component{
   render() {
     return (
         <div>
-          <div className="col-sm-6 col-md-4 col-lg-3">
-            <h3 style={{color: "rgba(234,46,73,0.9)"}}>Rank</h3>
+          <div className="col-sm-12 col-md-6 col-lg-3">
+            <h3 style={{color: "#e21a2d"}}>Rank</h3>
             <div className="ShowRank">
               <RankDex />
             </div>
