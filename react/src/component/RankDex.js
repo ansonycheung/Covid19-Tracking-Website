@@ -1,34 +1,29 @@
 import React, {Component} from "react";
+import RankItem from "./RankItem";
+
+function ShowRankList(items) {
+  return (
+      <div>
+        {items.map((item) => <RankItem key={item.country} country={item.country} confirmedCases={item.confirmedCases}/>)}
+      </div>
+  );
+}
+
 
 class RankDex extends Component{
-  static defaultProps = {
-    branchlists: [
-      {
-        id: 1,
-        text: "Data",
-        img: "https://images.unsplash.com/photo-1586449480537-3a22cf98b04c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
-      },
-      {
-        id: 2,
-        text: "News",
-        img: "https://images.unsplash.com/photo-1585282263861-f55e341878f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
-      },
-      {
-        id: 3,
-        text: "Discussion",
-        img: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
-      },
-      {
-        id: 4,
-        text: "Tips",
-        img: "https://images.unsplash.com/photo-1586864387564-ea6bc7ceb97c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
-      }
-    ]
-  };
-
   render() {
+    let data = require('../data_resource/data');
+    let sortedData = data.sort(function (a, b) {
+      return (b.confirmedCases - a.confirmedCases)
+    });
+    let rank = sortedData.slice(0, 10);
+
     return (
-        <div></div>
+        <div className="RankDex">
+          <div>
+            {ShowRankList(rank)}
+          </div>
+        </div>
     );
   }
 }

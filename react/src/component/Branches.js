@@ -5,8 +5,10 @@ import Branchdex from "./Branchdex";
 class Branches extends Component {
   render() {
     return (
-        <div className={Branches}>
-          <Branchdex/>
+        <div className="container">
+          <div className="Branches">
+            <Branchdex/>
+          </div>
         </div>
     );
   }

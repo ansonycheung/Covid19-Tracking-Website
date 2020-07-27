@@ -5,7 +5,7 @@ class ShowBranch extends Component {
     return (
         <div className="container">
           <div className="row">
-            <div className={ShowBranch} style={{
+            <div className="ShowBranch" style={{
               border: "2px solid white",
               padding: "10px",
               margin: "1rem",

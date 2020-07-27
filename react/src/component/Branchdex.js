@@ -30,10 +30,10 @@ class Branchdex extends Component {
 
   render() {
     return (
-        <div className={Branchdex}>
+        <div className="Branchdex">
           <div className="Branchdex-list">
             {this.props.branchlists.map((bl) => (
-                <ShowBranch id={bl.id} text={bl.text} img={bl.img}/>
+                <ShowBranch key={bl.id} id={bl.id} text={bl.text} img={bl.img}/>
             ))}
           </div>
         </div>
