@@ -8,6 +8,7 @@ function Jumbotron() {
             marginTop: 16,
             height: 260,
             backgroundColor: "#e21a2d",
+            textAlign: "center"
           }}>
             <p style={{
               fontSize: "50px",
@@ -17,7 +18,7 @@ function Jumbotron() {
             <p style={{
               fontSize: "20px",
               fontWeight: "bold",
-              color: "black"
+              color: "black",
             }}>NEU Align Student Group Project</p>
           </div>
         </div>

@@ -12,7 +12,7 @@ function ShowRankList(items) {
 
 class RankDex extends Component {
   render() {
-    let data = require('../data_resource/data');
+    let data = require('../../data_resource/data');
     let sortedData = data.sort(function (a, b) {
       return (b.confirmedCases - a.confirmedCases)
     });

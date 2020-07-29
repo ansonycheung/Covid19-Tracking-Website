@@ -1,7 +1,7 @@
 import React from "react";
 import NewsDex from "./NewsDex";
 
-function ShowNews() {
+function NewsShow() {
   return (
       <div>
         <div className="col-sm-12 col-md-6 col-lg-3">
@@ -12,4 +12,4 @@ function ShowNews() {
   );
 }
 
-export default ShowNews;
+export default NewsShow;

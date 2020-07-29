@@ -1,6 +1,6 @@
 import React from "react";
 
-function News({date_time, title}) {
+function NewsInfo({date_time, title}) {
   return (
       <div className="News">
         <ul className="list-group" style={{
@@ -26,11 +26,9 @@ function News({date_time, title}) {
               margin: "0"
             }}>{date_time}</p>
           </li>
-
         </ul>
-
       </div>
   );
 }
 
-export default News;
+export default NewsInfo;

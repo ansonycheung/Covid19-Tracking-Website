@@ -1,6 +1,7 @@
 import React, {Component} from "react";
+import {Link} from "react-router-dom";
 
-class ShowBranch extends Component {
+class BranchShow extends Component {
   render() {
     return (
         <div className="container">
@@ -16,10 +17,9 @@ class ShowBranch extends Component {
             }}>
               <img src={this.props.img} alt="feature branch"
                    style={{maxWidth: "100%", maxHeight: "100%"}}/>
-              <a href="/#" style={{color: "rgba(240, 248, 255, 0.8)"}}>
-                <h1>{this.props.text}</h1>
-              </a>
-
+              <Link to={this.props.path}
+                    style={{color: "rgba(240, 248, 255, 0.8)"}}>
+                <h1>{this.props.text}</h1></Link>
             </div>
           </div>
         </div>
@@ -28,4 +28,4 @@ class ShowBranch extends Component {
   }
 }
 
-export default ShowBranch;
+export default BranchShow;

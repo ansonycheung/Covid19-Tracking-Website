@@ -1,4 +1,4 @@
-.navbar-default .navbar-brand:hover {
+#home:hover {
   color: white;
   border-bottom: 1px solid red;
   margin-bottom: 1px;

@@ -1,7 +1,7 @@
 import React, {Component}from "react";
 import RankDex from "./RankDex";
 
-class ShowRank extends Component{
+class RankShow extends Component{
   render() {
     return (
         <div>
@@ -16,4 +16,4 @@ class ShowRank extends Component{
   }
 }
 
-export default ShowRank;
+export default RankShow;
