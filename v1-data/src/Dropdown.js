@@ -4,23 +4,24 @@ import Demo2 from './Chart2';
 import Demo3 from './Chart3';
 
 function Drop() {
-	const [ showChart, setShowChart ] = useState('start');
-	const [ region, setRegion ] = useState('US');
+	const [ showChart, setShowChart ] = useState('Select a factor');
+	const [ region, setRegion ] = useState('Select a region');
 	return (
 		<div className="drop">
 			<div
 				className="drop-button1"
 				style={{
 					float: 'left',
-					paddingLeft: '25%',
+					paddingLeft: '30%',
 					paddingRight: '25%',
 					paddingBottom: '3%'
 				}}
 			>
 				<div class="buttons">
+					<div style={{ color: 'white', paddingBottom: '5%' }}>Region :</div>
 					<div class="btn-group">
 						<button type="button" class="btn btn-danger">
-							Select a region
+							{region}
 						</button>
 						<button
 							type="button"
@@ -28,6 +29,7 @@ function Drop() {
 							data-toggle="dropdown"
 							aria-haspopup="true"
 							aria-expanded="false"
+							style={{ minWidth: '18%' }}
 						>
 							<span class="caret" />
 							<span class="sr-only">Toggle Dropdown</span>
@@ -54,11 +56,17 @@ function Drop() {
 				</div>
 			</div>
 
-			<div className="drop-button2" style={{ paddingBottom: '3%' }}>
+			<div
+				className="drop-button2"
+				style={{
+					paddingBottom: '3%'
+				}}
+			>
 				<div class="buttons">
+					<div style={{ color: 'white', paddingBottom: '0.3%' }}>Factor :</div>
 					<div class="btn-group">
 						<button type="button" class="btn btn-danger">
-							Select a factor
+							{showChart}
 						</button>
 						<button
 							type="button"
@@ -89,16 +97,22 @@ function Drop() {
 				</div>
 			</div>
 			<div>
-				{showChart === 'start' && <Demo3 />}
-				{showChart === 'death' && <Demo2 region={region} title="death" />}
-				{showChart === 'positive' && <Demo2 region={region} title="positive" />}
-				{showChart === 'negative' && <Demo2 region={region} title="negative" />}
-				{showChart === 'recovered' && <Demo2 region={region} title="recovered" />}
-				{showChart === 'hospitalized' && <Demo2 region={region} title="hospitalized" />}
-				{showChart === 'deathIncrease' && <Demo region={region} title="deathIncrease" />}
-				{showChart === 'positiveIncrease' && <Demo region={region} title="positiveIncrease" />}
-				{showChart === 'negativeIncrease' && <Demo region={region} title="negativeIncrease" />}
-				{showChart === 'hospitalizedIncrease' && <Demo region={region} title="hospitalizedIncrease" />}
+				{region === 'Select a region' || showChart === 'Select a factor' ? (
+					<Demo3 />
+				) : (
+					<div>
+						{region != 'Select a region' &&
+						showChart === 'death' && <Demo2 region={region} title="death" />}
+						{showChart === 'positive' && <Demo2 region={region} title="positive" />}
+						{showChart === 'negative' && <Demo2 region={region} title="negative" />}
+						{showChart === 'recovered' && <Demo2 region={region} title="recovered" />}
+						{showChart === 'hospitalized' && <Demo2 region={region} title="hospitalized" />}
+						{showChart === 'deathIncrease' && <Demo region={region} title="deathIncrease" />}
+						{showChart === 'positiveIncrease' && <Demo region={region} title="positiveIncrease" />}
+						{showChart === 'negativeIncrease' && <Demo region={region} title="negativeIncrease" />}
+						{showChart === 'hospitalizedIncrease' && <Demo region={region} title="hospitalizedIncrease" />}
+					</div>
+				)}
 			</div>
 		</div>
 	);
