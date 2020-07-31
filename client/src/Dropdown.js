@@ -16,11 +16,13 @@ class Drop extends React.Component {
 		fetch("http://localhost:9000/data")
 		.then(res => res.json())
 		.then(
-				(res) => {this.setState({data: res});
-				console.log(this.state.data)},
+				(res) => {this.setState({data: res});},
 				(error) => {this.setState({error})});
 	}
+
 	render() {
+		// const map = new Map2({data: this.state.data["states"]})
+
 		return (
 			<div className="drop">
 				<div
@@ -151,6 +153,8 @@ class Drop extends React.Component {
 						</div>
 					)}
 				</div>
+				{/*{console.log(this.state.data["states"])}*/}
+				{/*<Map2 data={tmp}/>*/}
 			</div>
 		);
 	}
