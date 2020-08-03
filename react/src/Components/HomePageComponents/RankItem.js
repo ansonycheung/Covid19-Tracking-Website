@@ -7,7 +7,7 @@ function RankItem({country, confirmedCases}) {
           margin: "2px"
         }}>
           <li className="list-group-item" style={{
-            backgroundColor: "#e21a2d",
+            backgroundColor: "rgba(234, 46, 73, 0.9)",
             color: "white",
             border: "0px",
             textAlign: "left",

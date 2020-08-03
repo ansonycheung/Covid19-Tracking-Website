@@ -7,13 +7,13 @@ function Jumbotron() {
           <div className="jumbotron" style={{
             marginTop: 16,
             height: 260,
-            backgroundColor: "#e21a2d",
+            backgroundColor: "rgba(234, 46, 73, 0.9)",
             textAlign: "center"
           }}>
             <p style={{
               fontSize: "50px",
               fontWeight: "bold",
-              color: "rgba(240, 248, 255, 0.8)",
+              color: "#fff",
             }}>Covid-19 Tracking Website</p>
             <p style={{
               fontSize: "20px",

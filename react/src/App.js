@@ -2,14 +2,14 @@ import React from 'react';
 import {BrowserRouter as Router, Route} from "react-router-dom";
 
 
-import HomePage from "./routes/HomePage";
-import DataPage from "./routes/DataPage";
-import NewsPage from "./routes/NewsPage";
-import TipsPage from "./routes/TipsPage";
-import DiscussionPage from "./routes/DiscussionPage";
-import AboutUsPage from "./routes/AboutUsPage";
-import SignUpPage from "./routes/SignUpPage";
-import LoginPage from "./routes/LoginPage";
+import HomePage from "./Routes/HomePage";
+import DataPage from "./Routes/DataPage";
+import NewsPage from "./Routes/NewsPage";
+import TipsPage from "./Routes/TipsPage";
+import DiscussionPage from "./Routes/DiscussionPage";
+import AboutUsPage from "./Routes/AboutUsPage";
+import SignUpPage from "./Routes/SignUpPage";
+import LoginPage from "./Routes/LoginPage";
 
 import './App.css';
 
