@@ -99,7 +99,11 @@ class Drop extends React.Component {
 						<div style={{ color: 'white', paddingBottom: '5%' }}>Region :</div>
 						<div class="btn-group">
 							<button type="button" class="btn btn-danger">
-								{this.state.region}
+								{this.state.region === 'Select a region' ? (
+									this.state.region
+								) : (
+									this.state.region.toUpperCase()
+								)}
 							</button>
 							<button
 								type="button"
@@ -245,8 +249,6 @@ class Drop extends React.Component {
 						</div>
 					)}
 				</div>
-				{/*{console.log(this.state.data["states"])}*/}
-				{/*<Map2 data={tmp}/>*/}
 			</div>
 		);
 	}
