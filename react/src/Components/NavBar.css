@@ -1,0 +1,11 @@
+#home:hover {
+  color: white;
+  border-bottom: 1px solid red;
+  margin-bottom: 1px;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+  color: white;
+  border-bottom: 1px solid red;
+  margin-bottom: 1px;
+}
