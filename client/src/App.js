@@ -1,27 +1,34 @@
 import React from 'react';
-import './App.css';
 import {BrowserRouter as Router, Route} from "react-router-dom";
-import "bootstrap/dist/css/bootstrap.min.css"
-import Data from "./routes/data";
-import Home from "./routes/ind";
-import Search from "./routes/search"
-import Contact from "./routes/contact"
-import Forum from "./routes/forum";
 
-class App extends React.Component{
-    render() {
-      return (
-          <Router>
-            <div className="root">
-              <Route exact path="/" component={Home}/>
-              <Route path="/data" component={Data}/>
-              <Route path="/search" component={Search}/>
-              <Route path="/forum" component={Forum}/>
-              <Route path="/contact" component={Contact}/>
-            </div>
-          </Router>
-      )
-  }
+
+import HomePage from "./Routes/HomePage";
+import DataPage from "./Routes/DataPage";
+import NewsPage from "./Routes/NewsPage";
+import TipsPage from "./Routes/TipsPage";
+import DiscussionPage from "./Routes/DiscussionPage";
+import AboutUsPage from "./Routes/AboutUsPage";
+import SignUpPage from "./Routes/SignUpPage";
+import LoginPage from "./Routes/LoginPage";
+
+import './App.css';
+
+function App() {
+  return (
+    <Router>
+      <div className="root">
+        <Route exact path="/" component={HomePage}/>
+        <Route path="/data" component={DataPage}/>
+        <Route path="/news" component={NewsPage}/>
+        <Route path="/discussion" component={DiscussionPage}/>
+        <Route path="/tips" component={TipsPage}/>
+        <Route path="/about_us" component={AboutUsPage}/>
+        <Route path="/sign_up" component={SignUpPage}/>
+        <Route path="/login" component={LoginPage}/>
+      </div>
+
+    </Router>
+  );
 }
 
 export default App;
