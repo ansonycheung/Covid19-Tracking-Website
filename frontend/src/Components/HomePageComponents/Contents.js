@@ -8,8 +8,8 @@ function Contents() {
       <div>
         <div className="container">
           <div className="row" style={{color: "rgba(240, 248, 255, 0.8)"}}>
-            <RankShow />
             <DataShow />
+            <RankShow />
             <NewsShow />
           </div>
         </div>

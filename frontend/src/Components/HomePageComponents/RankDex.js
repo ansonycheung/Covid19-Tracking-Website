@@ -16,7 +16,7 @@ class RankDex extends Component {
     let sortedData = data.sort(function (a, b) {
       return (b.confirmedCases - a.confirmedCases)
     });
-    let rank = sortedData.slice(0, 10);
+    let rank = sortedData.slice(0, 17);
 
     return (
         <div className="RankDex">
