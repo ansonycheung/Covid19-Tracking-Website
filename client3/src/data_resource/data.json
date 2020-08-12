@@ -1,0 +1,18 @@
+[
+  {"country": "Indonesia", "confirmedCases": 98778},
+  {"country": "Argentina", "confirmedCases": 158321},
+  {"country": "US", "confirmedCases": 4148011},
+  {"country": "India", "confirmedCases": 1435453},
+  {"country": "Germany", "confirmedCases": 205609},
+  {"country": "Italy", "confirmedCases": 246118},
+  {"country": "United Kingdom", "confirmedCases": 299430},
+  {"country": "Brazil", "confirmedCases": 2394513},
+  {"country": "China", "confirmedCases": 87028},
+  {"country": "Peru", "confirmedCases": 379884},
+  {"country": "Saudi Arabia", "confirmedCases": 266941},
+  {"country": "Japan", "confirmedCases": 22437},
+  {"country": "Russia", "confirmedCases": 818120},
+  {"country": "Chile", "confirmedCases": 345790},
+  {"country": "Spain", "confirmedCases": 345790},
+  {"country": "Canada", "confirmedCases": 345790}
+]
