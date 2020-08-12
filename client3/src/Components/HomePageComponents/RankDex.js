@@ -11,10 +11,21 @@ function ShowRankList(items) {
 }
 
 class RankDex extends Component {
+  state = {
+    data : {}
+  };
+  componentDidMount() {
+    fetch("http://localhost:9000/data")
+    .then(res => res.json())
+    .then(
+        (res) => {this.setState({data: res});},
+        (error) => {this.setState({error})});
+  }
+
   render() {
     let data = require('../../data_resource/data');
     let sortedData = data.sort(function (a, b) {
-      return (b.confirmedCases - a.confirmedCases)
+      return (b.total - a.total)
     });
     let rank = sortedData.slice(0, 17);
 

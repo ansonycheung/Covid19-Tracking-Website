@@ -1,26 +1,29 @@
 import React, {Component} from "react";
 import NewsInfo from "./NewsInfo";
 
-function ShowNewsList(items) {
-  return (
-      <div>
-        {items.map((item) => <NewsInfo key={item.title} date_time={item.date_time}
-                                       title={item.title} content={item.content}/>)}
-      </div>
-  );
-}
+class NewsDex extends React.Component {
+  state = {
+    news: {}
+  };
+  componentDidMount() {
+    fetch("http://localhost:9000/news")
+    .then(res => res.json())
+    .then(
+        (res) => {this.setState({news: res});},
+        (error) => {this.setState({error})});
+  }
 
-class NewsDex extends Component {
   render() {
-    let news = require('../../data_resource/news');
-    let newsList = news.slice(0, 5);
-
+    const arr = [];
+    for (let i = 0; i < this.state.news.length; i++){
+      arr.push(this.state.news[i])
+    }
+    let short_arr = arr.slice(0, 5);
     return (
         <div className="NewsDex">
-          {ShowNewsList(newsList)}
+          {short_arr.map((item) => <NewsInfo key={item.title} {...item}/>)}
         </div>
     );
-
   }
 }
 
