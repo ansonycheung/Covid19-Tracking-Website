@@ -25,10 +25,9 @@ class RankDex extends Component {
   render() {
     let data = require('../../data_resource/data');
     let sortedData = data.sort(function (a, b) {
-      return (b.total - a.total)
+      return (b.confirmedCases - a.confirmedCases)
     });
     let rank = sortedData.slice(0, 17);
-
     return (
         <div className="RankDex">
           <div>

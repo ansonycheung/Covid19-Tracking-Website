@@ -2,10 +2,9 @@ import sys
 from scrapy import cmdline
 import os
 
-if os.path.exists("News.json"):
-  os.remove("News.txt")
-else:
-  print("The file does not exist")
-cmdline.execute("scrapy crawl news -o News.json".split())
+f = open('News.json', 'r+')
+f.truncate(0) # need '0' when using r+
+f.close()
+cmdline.execute("scrapy crawl news -o news.json".split())
 
 sys.stdout.flush()

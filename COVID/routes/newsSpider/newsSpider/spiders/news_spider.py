@@ -7,7 +7,10 @@ class NewsSpider(scrapy.Spider):
         'https://www.coronavirustoday.com/coronavirus-breaking-news'
     ]
     def parse(self, response):
+        i = 0
         for quote in response.css('div div.view-content div.views-row'):
+            if i == 50: break
+            i += 1
             if not quote.css('div.views-field-created span::text').get(): continue
             content = self.content_helper(quote.css('div.views-field-body div p'))
             yield {

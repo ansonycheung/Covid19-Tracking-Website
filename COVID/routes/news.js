@@ -3,8 +3,7 @@ var router = express.Router();
 var fs = require('fs');
 router.get('/', function(req, res, next) {
     try{
-        let news = require('../routes/newsSpider/News.json');
-        console.log("news")
+        let news = require('../routes/newsSpider/news.json');
         res.send(JSON.stringify(news));
     } catch (e) {
         console.log("Working...")
