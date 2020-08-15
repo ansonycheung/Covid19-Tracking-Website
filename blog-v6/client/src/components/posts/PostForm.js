@@ -45,7 +45,7 @@ const PostForm = ({ post, onChange, onBlur, loading, onSubmit }) => {
                   >
                      Submit
                   </Button>
-                 <Link to={"/blog"}>
+                 <Link to={"/"}>
                  <Button
                      variant="outline-danger"
                      className="mt-3 ml-3"

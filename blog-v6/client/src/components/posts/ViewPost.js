@@ -26,7 +26,7 @@ const ViewPost = ({ post, auth, onDelete, onEdit, onReply, onDeleteComment }) =>
    return (
       <Container className="mt-4 viewPost">
         <Row>
-          <Link to="/blog">
+          <Link to="/">
             <i className="fas fa-backward"></i>
                  BACK
           </Link>

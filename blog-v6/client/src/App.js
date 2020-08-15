@@ -39,26 +39,27 @@ const App = () => {
             <ProgressBar />
             <Navbar />
             <Switch>
-               <Route path="/" exact component={Landing} />
+                <Route exact path="/" component={BlogPage} />
+               {/*<Route path="/" exact component={Landing} />*/}
                <Route path="/login" component={LoginPage} />
                <Route path="/signup" component={SignUpPage} />
                {/*<PrivateRoute exact path="/blog" component={BlogPage} />*/}
                <PrivateRoute
                   exact
-                  path="/blog/post/create"
+                  path="/post/create"
                   component={CreatePostPage}
                />
               <PrivateRoute
                   exact
-                  path="/blog/post/:id/create_comment"
+                  path="/post/:id/create_comment"
                   component={CreateCommentPage}
               />
                <PrivateRoute
                   exact
-                  path="/blog/post/update/:id"
+                  path="/post/update/:id"
                   component={UpdatePostPage}
                />
-              <Route exact path="/blog" component={BlogPage} />
+
               {/*<Route*/}
               {/*    exact*/}
               {/*    path="/blog/post/create"*/}
@@ -69,8 +70,8 @@ const App = () => {
               {/*    path="/blog/post/update/:id"*/}
               {/*    component={UpdatePostPage}*/}
               {/*/>*/}
-               <Route exact path="/blog/post/:id" component={ViewPostPage} />
-               <Route path="/blog/:author" component={BlogPage} />
+               <Route exact path="/post/:id" component={ViewPostPage} />
+               {/*<Route path="/blog/:author" component={BlogPage} />*/}
                <Redirect from="*" to="/" />
             </Switch>
          </BrowserRouter>

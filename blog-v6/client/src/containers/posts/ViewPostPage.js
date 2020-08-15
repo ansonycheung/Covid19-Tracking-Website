@@ -21,11 +21,11 @@ const ViewPostPage = ({
 
 
    const handleEdit = () => {
-      history.push(`/blog/post/update/${post._id}`);
+      history.push(`/post/update/${post._id}`);
    };
 
    const handleReply = () => {
-      history.push(`/blog/post/${post._id}/create_comment`);
+      history.push(`/post/${post._id}/create_comment`);
    };
 
    const handleDelete = () => {

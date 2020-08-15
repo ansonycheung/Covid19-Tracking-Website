@@ -14,7 +14,7 @@ export const createComment = (commentData, history, postId) => dispatch => {
       type: CREATE_COMMENT,
       payload: res.data
     });
-    history.push(`/blog/post/${postId}`);
+    history.push(`/post/${postId}`);
   })
   .catch(err => {
     dispatch(setErrors(err.response.data));
@@ -32,7 +32,7 @@ export const deleteComment = (id, history,postId) => dispatch => {
       payload: id
     });
     // dispatch(togglePostLoading());
-    history.push(`/blog/post/${postId}`);
+    history.push(`/post/${postId}`);
   })
   .catch(err => {
     dispatch(setErrors(err.response.data));
