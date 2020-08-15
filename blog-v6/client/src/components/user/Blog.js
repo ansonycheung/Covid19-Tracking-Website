@@ -25,7 +25,7 @@ const Blog = ({ posts, auth }) => {
       <React.Fragment>
          <div className="mx-3">
             <Nav className="justify-content-between mt-2 mb-2">
-               <Link to="/blog/post/create">
+               <Link to="/post/create">
                   <Button variant="light" className="styleBtn">
                      +
                   </Button>
