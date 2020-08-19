@@ -39,15 +39,3 @@ export const deleteComment = (id, history,postId) => dispatch => {
     // dispatch(togglePostLoading());
   });
 };
-//
-// export const togglePostLoading = () => {
-//   return {
-//     type: TOGGLE_POST_LOADING
-//   };
-// };
-//
-// export const togglePostsLoading = () => {
-//   return {
-//     type: TOGGLE_POSTS_LOADING
-//   };
-// };
