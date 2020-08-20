@@ -32,12 +32,8 @@ const mongoURI = require(pathToConfig).MONGO_URI;
 # Quick Start
 ```
 // Install dependencies for server & client
-npm install && npm run client-install
+npm install (in server directory )&& npm install (in client directory)
 
 // Run client & server with concurrently
-npm run dev
+npm run dev (in server directory)
 ```
-
-[Install & Configure Redux Devtools](https://github.com/zalmoxisus/redux-devtools-extension)
-
-[Learn & Build a MERN Blog Application in 100 hours](https://medium.com/@rajatdhoot/learn-build-a-mern-stack-application-in-100-hours-part-1-ee56e3f61979)
