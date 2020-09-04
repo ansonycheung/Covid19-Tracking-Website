@@ -19,11 +19,7 @@ const Navigationbar = ({ auth, username, onClick }) => (
                    <span className="icon-bar"></span>
                    <span className="icon-bar"></span>
                 </button>
-                {/*<a href="/#" className="navbar-brand">*/}
-                {/*  <img alt="Brand"*/}
-                {/*       src="https://web.northeastern.edu/sds/CEWS/images/NEUlogo.png"*/}
-                {/*       style={{height: "100%"}}/>*/}
-                {/*</a>*/}
+
                 <img className="navbar-brand"
                      alt="Brand"
                      src="https://web.northeastern.edu/sds/CEWS/images/NEUlogo.png"
@@ -68,7 +64,7 @@ const Navigationbar = ({ auth, username, onClick }) => (
                   {auth ? (
 
                       <li>
-                      <Link to="/login" style={{
+                      <Link to="/login" onClick={onClick} style={{
                           color: "rgba(240, 248, 255, 0.8)",
                           $nest: {
                           '&:hover': {
