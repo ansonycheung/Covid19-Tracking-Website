@@ -1,7 +1,7 @@
 import React from 'react';
 import getFormattedDate from '../../../utils/getFormattedDate';
 import { Button, Col, Row } from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 import PropTypes from 'prop-types';
 
 const Comment = ({ auth, comment, onDelete }) => {
