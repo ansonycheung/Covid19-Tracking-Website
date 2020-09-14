@@ -17,12 +17,12 @@ INTRODUCTION
 A Website for tracking Covid-19 related data, reading related news, and posting discussion.
 
 ![](https://github.com/Covid19Site/Covid19-Tracking-Website/blob/master/Home-Page.png?raw=true)
-![](Data Page.png)
-![](News Page.png)
-![](Discussion Page.png)
-![](Login Page.png)
-![](Tips Page.png)
-![](About Us Page.png)
+![](https://github.com/Covid19Site/Covid19-Tracking-Website/blob/master/Data-Page.png?raw=true)
+![](https://github.com/Covid19Site/Covid19-Tracking-Website/blob/master/News-Page.png?raw=true)
+![](https://github.com/Covid19Site/Covid19-Tracking-Website/blob/master/Discusion-Page.png?raw=true)
+![](https://github.com/Covid19Site/Covid19-Tracking-Website/blob/master/Login-Page.png?raw=true)
+![](https://github.com/Covid19Site/Covid19-Tracking-Website/blob/master/Tips-Page.png?raw=true)
+![](https://github.com/Covid19Site/Covid19-Tracking-Website/blob/master/About-Us-Page.png?raw=true)
 
 
 REQUIREMENTS
