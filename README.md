@@ -1,39 +1,47 @@
-# [MERN Blogging Application](https://makemyblog.herokuapp.com)
+# [Covid19 Tracking Website](https://covid19-tracking-website.herokuapp.com/)
 
-![](blogApplication.gif)
 
-Technologies Used:
-- FrontEnd: [React.js](https://reactjs.org/), [React-Redux](https://react-redux.js.org/), ([Redux?](https://www.youtube.com/watch?v=3sjMRS1gJys)), React Hooks, React-Bootstrap, Redux-thunk, Axios
-- Database: [MongoDB](https://www.mongodb.com/), mongoose, [MongoDB Atlas](https://cloud.mongodb.com)
-- BackEnd: Node.js, Express.js, [Passport.js](http://www.passportjs.org/), JsonWebToken
+CONTENTS OF THIS FILE
+---------------------
 
-# Configuration
-For [configuring the environment variables](https://medium.com/the-node-js-collection/making-your-node-js-work-everywhere-with-environment-variables-2da8cdf6e786) there are two common approaches:
-- Creating a .env file in your root directory with KEY=VALUE pairs assigned and fetching those keys in server.js file using dotenv()
-```
-# Sample .env file
-MONGO_URI='mongodb://dbuser:dbpass@host:port/dbname'
+ * Introduction
+ * Requirements
+ * Usage
+ * Maintainers
+ * Contributing
 
-# Server.js
-require('dotenv').config();
-const mongoURI = process.env.MONGO_URI
-``` 
-- Export a config file with {KEY:VALUE} pairs. Import the file and use the required variables.
-```
-# Sample config file
-module.exports = {
-  MONGO_URI: 'mongodb://dbuser:dbpass@host:port/dbname'
-}
 
-# Server.js
-const mongoURI = require(pathToConfig).MONGO_URI;
-```
+INTRODUCTION
+------------
 
-# Quick Start
-```
-// Install dependencies for server & client
-npm install (in server direcotry )&& npm install (in client directory)
+A Website for tracking Covid-19 related data, reading related news, and posting discussion.
 
-// Run client & server with concurrently
-npm run dev (in server directory)
-```
+![](zoom-in-zoom-out.gif)
+![](search-and-routing.gif)
+
+
+REQUIREMENTS
+------------
+
+This module requires no modules outside of JavaScript.
+
+
+USAGE
+-------------
+
+https://covid19-tracking-website.herokuapp.com/
+
+
+MAINTAINERS
+-----------
+
+ * Emiliano Zhu - https://www.linkedin.com/in/emiliano-zhenfang-zhu-587416184/
+
+
+CONTRIBUTING
+-----------
+
+Pull requests are welcome. For major changes, please open an issue first to
+discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
