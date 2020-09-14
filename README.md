@@ -16,8 +16,13 @@ INTRODUCTION
 
 A Website for tracking Covid-19 related data, reading related news, and posting discussion.
 
-![](zoom-in-zoom-out.gif)
-![](search-and-routing.gif)
+![](Home Page.png)
+![](Data Page.png)
+![](News Page.png)
+![](Discussion Page.png)
+![](Login Page.png)
+![](Tips Page.png)
+![](About Us Page.png)
 
 
 REQUIREMENTS
