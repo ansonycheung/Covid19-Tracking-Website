@@ -16,7 +16,7 @@ INTRODUCTION
 
 A Website for tracking Covid-19 related data, reading related news, and posting discussion.
 
-![](https://github.com/Covid19Site/Covid19-Tracking-Website/Home-Page.png?raw=true)
+![](https://github.com/Covid19Site/Covid19-Tracking-Website/blob/master/Home-Page.png?raw=true)
 ![](Data Page.png)
 ![](News Page.png)
 ![](Discussion Page.png)
